@@ -1,0 +1,94 @@
+{
+    "total_samples": 5572,
+    "ham_count": 4825,
+    "spam_count": 747,
+    "best_algorithm": "Support Vector Machine (SVM)",
+    "models": {
+        "Multinomial Naive Bayes": {
+            "baseline_acc": 0.9874439461883409,
+            "optimized_acc": 0.9838565022421525,
+            "precision": 0.9924812030075187,
+            "recall": 0.8859060402684564,
+            "f1_score": 0.9361702127659575,
+            "roc_auc": 0.9861776925535315,
+            "best_params": {
+                "alpha": 0.1
+            },
+            "confusion_matrix": [
+                [
+                    965,
+                    1
+                ],
+                [
+                    17,
+                    132
+                ]
+            ]
+        },
+        "Support Vector Machine (SVM)": {
+            "baseline_acc": 0.9766816143497757,
+            "optimized_acc": 0.989237668161435,
+            "precision": 0.9858156028368794,
+            "recall": 0.9328859060402684,
+            "f1_score": 0.9586206896551724,
+            "roc_auc": 0.9910271374379925,
+            "best_params": {
+                "C": 1,
+                "kernel": "linear"
+            },
+            "confusion_matrix": [
+                [
+                    964,
+                    2
+                ],
+                [
+                    10,
+                    139
+                ]
+            ]
+        },
+        "Logistic Regression": {
+            "baseline_acc": 0.9811659192825112,
+            "optimized_acc": 0.9874439461883409,
+            "precision": 0.9591836734693877,
+            "recall": 0.9463087248322147,
+            "f1_score": 0.9527027027027027,
+            "roc_auc": 0.9929516306084734,
+            "best_params": {
+                "C": 50,
+                "class_weight": "balanced"
+            },
+            "confusion_matrix": [
+                [
+                    960,
+                    6
+                ],
+                [
+                    8,
+                    141
+                ]
+            ]
+        },
+        "Soft Voting Ensemble": {
+            "baseline_acc": null,
+            "optimized_acc": 0.9874439461883409,
+            "precision": 0.972027972027972,
+            "recall": 0.9328859060402684,
+            "f1_score": 0.952054794520548,
+            "roc_auc": 0.9923124487612378,
+            "best_params": {
+                "estimators": "NB + SVM + LR (Soft Voting)"
+            },
+            "confusion_matrix": [
+                [
+                    962,
+                    4
+                ],
+                [
+                    10,
+                    139
+                ]
+            ]
+        }
+    }
+}
